@@ -1,22 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import {Link } from "expo-router";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World !! </Text>
+    <SafeAreaView className="flex-1 items-center justify-center ">
+      <Text className="text-3xl font-sans">Hello World !! </Text>
       <StatusBar style="auto" />
     <Link href="./profile" style ={{color :'blue'}} >Profile</Link>
-    </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
